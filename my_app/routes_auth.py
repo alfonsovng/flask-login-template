@@ -39,7 +39,7 @@ def login():
 @login_manager.user_loader
 def load_user(user_id):
     if user_id is not None:
-        return User.query.get(user_id)
+        return User.find_user(email = user_id)
     return None
 
 @login_manager.unauthorized_handler

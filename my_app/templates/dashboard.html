@@ -1,1 +1,31 @@
-TODO DASHBOARD
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My App</title>
+	<meta name="description" content="Template project with flask and flask-login">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/static/img/favicon/site.webmanifest">
+	<link href="/static/css/my_app.css" rel="stylesheet">
+</head>
+
+<body>
+	{% for message in get_flashed_messages() %}
+	<h5>{{ message }}</h5>
+	{% endfor %}
+	
+    <h1>Dashboard</h1>
+    <p>
+        <img src="/static/img/python.jpg" alt="python rules!" />
+    </p>
+	<p>
+		<a href="/logout">Logout</a>
+	</p>
+
+</body>
+</html>
